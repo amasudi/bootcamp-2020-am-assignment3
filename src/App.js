@@ -1,24 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./MyCssFile.css";
 
-function App() {
+function App({ myName, sirName, myAge, sirAge }) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>My React App</h1>
+      <div className="main-container">
+        Hello World by <strong>{myName}</strong>
+        <div>
+          I am not {sirName}, my name is {myName}. I am {sirAge - myAge} younger
+          than {sirName}, his age is {sirAge} and my age is just {myAge}.
+        </div>
+        <div>
+          <h2>Ordered List Example</h2>
+          <ol>
+            <li>this is ordered list item</li>
+            <li>this is ordered list item</li>
+            <li>this is ordered list item</li>
+          </ol>
+        </div>
+        <div>
+          <h3>Un-Ordered List Example</h3>
+          <ul>
+            <li>this is un-ordered list item</li>
+            <li>this is un-ordered list item</li>
+            <li>this is un-ordered list item</li>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 }
